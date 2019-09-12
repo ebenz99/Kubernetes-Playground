@@ -1,10 +1,12 @@
-FROM python:3
-FROM continuumio/anaconda3
-RUN conda install numpy
+FROM ubuntu:16.04
+#FROM python:3
+#FROM continuumio/anaconda3
+#RUN conda install numpy
 
 ADD . /
 
 
-WORKDIR /app
-
+WORKDIR .
+#RUN pwd
+CMD ["touch", "a.txt"]
 #CMD ["python", "app.py","1"]
