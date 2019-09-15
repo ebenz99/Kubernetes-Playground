@@ -9,4 +9,5 @@ ADD . /
 WORKDIR .
 #RUN pwd
 CMD ["touch", "a.txt"]
+CMD ["sleep", "80"]
 #CMD ["python", "app.py","1"]
