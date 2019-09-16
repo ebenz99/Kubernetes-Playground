@@ -1,8 +1,0 @@
-apiVersion: app/v1
-kind: Deployment
-metadata:
-  name: my-thing
-spec:
-  containers:
-  - name: mkdn
-    image: ebensma/mkdn:latest

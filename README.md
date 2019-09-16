@@ -16,3 +16,4 @@ Let's see if I remember Docker
 Also good to know:
 - Log in to the NRP with `nextflow kuberun login -v deepgtex-prp`
 - save pod data with `kubectl cp saver-pod:a.txt .`
+- ssh into pod with `kubectl exec -it <podname> -- /bin/bash`
