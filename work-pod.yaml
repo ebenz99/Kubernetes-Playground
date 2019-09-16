@@ -13,3 +13,4 @@ spec:
       volumeMounts:
         - mountPath: "/usr/share"
           name: task-pv-storage
+  restartPolicy: OnFailure
