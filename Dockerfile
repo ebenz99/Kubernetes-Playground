@@ -8,6 +8,6 @@ ADD . /
 
 WORKDIR .
 #RUN pwd
-CMD ["touch", "a.txt"]
-CMD ["sleep", "80"]
+CMD ["./run.sh"]
+#RUN /bin/bash -c './run.sh'
 #CMD ["python", "app.py","1"]

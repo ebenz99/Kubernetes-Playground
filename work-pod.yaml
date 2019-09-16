@@ -8,7 +8,7 @@ spec:
       persistentVolumeClaim:
         claimName: task-pv-claim
   containers:
-    - name: wiw
+    - name: my-name
       image: ebensma/mkdn:latest
       volumeMounts:
         - mountPath: "/usr/share"
