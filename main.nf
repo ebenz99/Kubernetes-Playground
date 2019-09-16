@@ -5,6 +5,6 @@ process test {
   val x from num
 
   """
-  date > d.txt
+  echo "hi" > d.txt
   """
 }
