@@ -1,0 +1,3 @@
+[submodule "minik"]
+	path = minik
+	url = https://github.com/SystemsGenetics/kube-runner.git

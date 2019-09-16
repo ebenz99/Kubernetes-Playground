@@ -8,7 +8,7 @@ spec:
     image: ubuntu
     args: ["sleep", "infinity"]
     volumeMounts:
-    - mountPath: /usr/share
+    - mountPath: /workspace
       name: task-pv-claim
   restartPolicy: Never
   volumes:

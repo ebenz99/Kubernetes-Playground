@@ -9,6 +9,7 @@ ADD . /
 WORKDIR .
 #RUN pwd
 ENTRYPOINT ["/bin/bash"]
+CMD ["cd","workspace/ebensman/minik"]
 CMD ["./run.sh"]
 #RUN /bin/bash -c './run.sh'
 #CMD ["python", "app.py","1"]

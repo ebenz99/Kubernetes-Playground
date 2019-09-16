@@ -11,6 +11,6 @@ spec:
     - name: my-name
       image: ebensma/mkdn:latest
       volumeMounts:
-        - mountPath: "/usr/share"
+        - mountPath: "/workspace"
           name: task-pv-storage
   restartPolicy: OnFailure
