@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: saver-pod
+spec:
+  containers:
+  - name: saver-pod
+    image: ubuntu
+    args: ["sleep", "infinity"]
+    volumeMounts:
+    - mountPath: /usr/share
+      name: task-pv-claim
+  restartPolicy: Never
+  volumes:
+    - name: task-pv-claim
+      persistentVolumeClaim:
+        claimName: task-pv-claim
