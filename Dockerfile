@@ -3,16 +3,20 @@ FROM ubuntu:16.04
 #FROM continuumio/anaconda3
 #RUN conda install numpy
 
-ADD . /
+ADD . /workspace/ebensman/minik/
 
 
 WORKDIR /workspace/ebensman/minik/
+
+
 #RUN pwd
-ENTRYPOINT ["/bin/bash"]
+#ENTRYPOINT ["/bin/bash"]
 #CMD ["cd","workspace/ebensman/minik/"]
 
-
 CMD ["./run.sh"]
+
+
+#CMD ["./run.sh"]
 
 
 #RUN /bin/bash -c './run.sh'
