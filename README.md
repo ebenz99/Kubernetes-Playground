@@ -14,6 +14,8 @@ Let's see if I remember Docker
 
 
 Also good to know:
+- delete unused docker images `docker rmi -f $(docker images | grep "<none>" | awk "{print \$3}")`
+- run a deployment or pod `kubectl apply -f workpod.yaml`
 - Log in to the NRP with `nextflow kuberun login -v deepgtex-prp`
 - save pod data with `kubectl cp saver-pod:a.txt .`
 - ssh into pod with `kubectl exec -it <podname> -- /bin/bash`
