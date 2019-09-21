@@ -3,21 +3,10 @@ FROM ubuntu:16.04
 #FROM continuumio/anaconda3
 #RUN conda install numpy
 
-ADD . /workspace/ebensman/minik/
+ADD . /
 
 
-WORKDIR /workspace/ebensman/minik/
-
-
+WORKDIR .
 #RUN pwd
-#ENTRYPOINT ["/bin/bash"]
-#CMD ["cd","workspace/ebensman/minik/"]
-
+ENTRYPOINT ["/bin/bash"]
 CMD ["./run.sh"]
-
-
-#CMD ["./run.sh"]
-
-
-#RUN /bin/bash -c './run.sh'
-#CMD ["python", "app.py","1"]
