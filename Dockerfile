@@ -3,7 +3,7 @@ FROM ubuntu:16.04
 ADD . /
 
 #WORKDIR /workspace/
-#ENTRYPOINT ["/bin/bash", "-c", "pwd > m.txt"]
+ENTRYPOINT ["/bin/bash", "-c", "pwd > m.txt"]
 #CMD ["pwd"]
 
 
