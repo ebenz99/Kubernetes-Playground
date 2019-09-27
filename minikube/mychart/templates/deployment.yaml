@@ -39,6 +39,7 @@ spec:
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
       {{- with .Values.nodeSelector }}
+      restartPolicy: {{ .Values.spec.restartPolicy }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
       {{- end }}

@@ -13,4 +13,4 @@ spec:
       volumeMounts:
         - mountPath: "/workspace"
           name: task-pv-storage
-  restartPolicy: OnFailure
+  restartPolicy: Never

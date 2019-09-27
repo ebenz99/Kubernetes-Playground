@@ -1,10 +1,17 @@
+#ENTRYPOINT ["/bin/bash", "-c", "pwd > m.txt"]
 FROM ubuntu:16.04
 
-ADD . /
+COPY . /
 
-#WORKDIR /workspace/
-ENTRYPOINT ["/bin/bash", "-c", "pwd > m.txt"]
+WORKDIR /
+ENTRYPOINT ["/bin/bash"]
+#ADD . /workspace/
+#CMD ["touch", "b.txt"]
+#CMD ["ls"]
+#CMD ["ls"]
+#CMD ["sleep", "20"]
 #CMD ["pwd"]
+CMD ["./run.sh"]
 
 
 #the below works

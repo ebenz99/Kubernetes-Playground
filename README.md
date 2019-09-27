@@ -20,3 +20,7 @@ Also good to know:
 - save pod data with `kubectl cp saver-pod:a.txt .`
 - ssh into pod with `kubectl exec -it <podname> -- /bin/bash`
 - copy data to pvc `./kube-runner/kube-load.sh task-pv-claim .`
+- delete helm stuff `helm ls --all --short | xargs -L1 helm delete --purge`
+- update deployment `helm upgrade a1 ./mychart --recreate-pods`
+- because `ls` isn't a bash command, it needs be before a `/bin/bash` entrypoint
+- Minio Slate info: https://portal.slateci.io/applications/incubator/minio

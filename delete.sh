@@ -1,1 +1,1 @@
-kubectl delete pod task
+kubectl delete pods --all

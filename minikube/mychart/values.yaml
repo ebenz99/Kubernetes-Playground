@@ -4,10 +4,13 @@
 
 replicaCount: 1
 
+spec:
+  restartPolicy: Always
+
 image:
   repository: ebensma/mkdn
   tag: latest
-  pullPolicy: IfNotPresent
+  pullPolicy: Always
 
 imagePullSecrets: []
 nameOverride: ""
