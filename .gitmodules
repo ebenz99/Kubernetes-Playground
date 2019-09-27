@@ -4,3 +4,6 @@
 [submodule "kube-runner"]
 	path = kube-runner
 	url = https://github.com/SystemsGenetics/kube-runner
+[submodule "minislate"]
+	path = minislate
+	url = https://github.com/slateci/minislate.git
