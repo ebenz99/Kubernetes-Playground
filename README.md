@@ -24,3 +24,4 @@ Also good to know:
 - update deployment `helm upgrade a1 ./mychart --recreate-pods`
 - because `ls` isn't a bash command, it needs be before a `/bin/bash` entrypoint
 - Minio Slate info: https://portal.slateci.io/applications/incubator/minio
+- `RUN` vs `CMD` in Dockerfile https://stackoverflow.com/questions/37461868/difference-between-run-and-cmd-in-a-docker-file

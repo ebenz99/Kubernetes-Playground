@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: ebensman-save-768e
+spec:
+  containers:
+  - name: ebensman-save-768e
+    image: ubuntu
+    args: ["sleep", "infinity"]
+    volumeMounts:
+    - mountPath: 
+      name: task-pv-claim
+  restartPolicy: Never
+  volumes:
+    - name: task-pv-claim
+      persistentVolumeClaim:
+        claimName: task-pv-claim
