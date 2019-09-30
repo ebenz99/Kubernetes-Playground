@@ -5,7 +5,8 @@ process test {
   val x from num
 
   """
-  cd /usr
+  cd ..
+  cd ..
   echo "hi" > d.txt
   """
 }
