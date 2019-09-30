@@ -9,9 +9,9 @@ spec:
     args: ["sleep", "infinity"]
     volumeMounts:
     - mountPath: /workspace
-      name: task-pv-claim
+      name: minio-pv-claim
   restartPolicy: Never
   volumes:
-    - name: task-pv-claim
+    - name: minio-pv-claim
       persistentVolumeClaim:
-        claimName: task-pv-claim
+        claimName: minio-pv-claim

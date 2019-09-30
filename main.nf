@@ -7,6 +7,6 @@ process test {
   """
   cd ..
   cd ..
-  echo "hi" > d.txt
+  echo "hello" > e.txt
   """
 }
