@@ -1,1 +1,1 @@
-kubectl apply -f minikube/work-pod.yaml
+kubectl apply -f minikube/saverpod.yaml
