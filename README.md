@@ -1,6 +1,6 @@
 #  Minikube Stuff
 
-Let's see if I remember Docker
+## Docker/Nextflow Important Steps
 
 1. `docker build -t mkdn .`
 2. `docker run --name my_first_docker -i -t mkdn`
@@ -13,6 +13,7 @@ Let's see if I remember Docker
 9. `nextflow kuberun login -v deepgtex-prp`
 
 
+## Kubernetes Stuff
 Also good to know:
 - delete unused docker images `docker rmi -f $(docker images | grep "<none>" | awk "{print \$3}")`
 - run a deployment or pod `kubectl apply -f workpod.yaml`
@@ -27,5 +28,8 @@ Also good to know:
 - `RUN` vs `CMD` in Dockerfile https://stackoverflow.com/questions/37461868/difference-between-run-and-cmd-in-a-docker-file
 - minio scripts: https://github.com/minio/minio/blob/master/docs/orchestration/kubernetes/
 
-Slate
-- slate app list --dev
+## Slate
+- Peruse the incubator - >`slate app list --dev`
+- set up minio configuration -> `slate app get-conf minio --dev -o minio.yaml`
+- create a secret -> `slate secret create ekey --group <group> --cluster <cluster> --from-literal=accesskey=<username> --from-literal=secretkey=<secret>`
+- installing minio -> `slate app install minio --cluster <YOUR CLUSTER> --group <YOUR GROUP> --conf minio.yaml --dev`
