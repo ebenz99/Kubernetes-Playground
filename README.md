@@ -33,3 +33,6 @@ Also good to know:
 - set up minio configuration -> `slate app get-conf minio --dev -o minio.yaml`
 - create a secret -> `slate secret create ekey --group <group> --cluster <cluster> --from-literal=accesskey=<username> --from-literal=secretkey=<secret>`
 - installing minio -> `slate app install minio --cluster <YOUR CLUSTER> --group <YOUR GROUP> --conf minio.yaml --dev`
+
+## Minio
+- `docker run -p 9000:9000   --user $(id -u):$(id -g)   --name minio1   -e "MINIO_ACCESS_KEY=<key>"   -e "MINIO_SECRET_KEY=<key2>"   -v ${HOME}/data:/data   minio/minio server /data`
