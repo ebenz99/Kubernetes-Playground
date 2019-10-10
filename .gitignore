@@ -1,4 +1,4 @@
 *.sh
-nextflow.config
+*.config
 .nextflow.l*
 kube-runner
