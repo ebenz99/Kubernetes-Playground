@@ -36,3 +36,7 @@ Also good to know:
 
 ## Minio
 - `docker run -p 9000:9000   --user $(id -u):$(id -g)   --name minio1   -e "MINIO_ACCESS_KEY=<key>"   -e "MINIO_SECRET_KEY=<key2>"   -v ${HOME}/data:/data   minio/minio server /data`
+
+## Current State
+
+AWS scope in Nextflow useless for writing nextflow logs to Minio PVC; will have to use `-with-weblog` option to POST to PVC (possible including keys in query string)
