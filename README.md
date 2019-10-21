@@ -27,6 +27,7 @@ Also good to know:
 - Minio Slate info: https://portal.slateci.io/applications/incubator/minio
 - `RUN` vs `CMD` in Dockerfile https://stackoverflow.com/questions/37461868/difference-between-run-and-cmd-in-a-docker-file
 - minio scripts: https://github.com/minio/minio/blob/master/docs/orchestration/kubernetes/
+- PV(C) won't delete? Use this command to make it: `kubectl patch pvc db-pv-claim -p '{"metadata":{"finalizers":null}}'` (also check for volume attachments using `kubectl get volumeattachments`)
 
 ## Slate
 - Peruse the incubator - >`slate app list --dev`

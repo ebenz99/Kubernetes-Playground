@@ -9,9 +9,9 @@ spec:
     args: ["sleep", "infinity"]
     volumeMounts:
     - mountPath: /workspace
-      name: minio-pv-claim
+      name: deepgtex-prp
   restartPolicy: Never
   volumes:
-    - name: minio-pv-claim
+    - name: deepgtex-prp
       persistentVolumeClaim:
-        claimName: minio-pv-claim
+        claimName: deepgtex-prp
