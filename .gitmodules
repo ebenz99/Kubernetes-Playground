@@ -7,3 +7,7 @@
 [submodule "minislate"]
 	path = minislate
 	url = https://github.com/slateci/minislate.git
+[submodule "nextflow-api"]
+	path = nextflow-api
+	url = https://github.com/SciDAS/nextflow-api.git
+	branch = cole-dev
