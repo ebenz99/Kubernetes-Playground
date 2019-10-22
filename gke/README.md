@@ -1,7 +1,5 @@
 # GKE Stuff
 
-Per cole, to set up a cluster:
-
 ## Helm Edition (New)
 
 1. Set up a cluster:
