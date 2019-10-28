@@ -21,13 +21,13 @@ $ gcloud container clusters create \
 `gcloud compute disks create <diskname> --size=<number-of-gigs> --zone=<zoneNOTREGION>`
 
 3.  Create a nfs provisioner that will allocate and bind your PVC
-`helm install kf stable/nfs-server-provisioner --set=persistence.enabled=true,persistence.storageClass=standard,persistence.size=10Gi`
+`helm3 install kf stable/nfs-server-provisioner --set=persistence.enabled=true,persistence.storageClass=standard,persistence.size=10Gi`. For more info, go to https://github.com/helm/charts/tree/master/stable/nfs-server-provisioner.
 
 4. Make sure your nfs storageclass now exists with `kubectl get sc`
 
 5. Create a configmap using the `create-config-map.sh`. Your `zone` can be found from the zone you specified when creating your cluster, the `PROJECTID` can be found from `gcloud projects list`, the `clusterid` is found with `gcloud container clusters list`, and the keypath is the path to your kubeconfig file, which in most cases is `~/.kube/config`. Run this to create the mapping.
 
-6. Edit your helm `values.yaml` such that `NewLocalPVC` is disabled and `ExistingLocalPVC` is enabled. Set the name equal to the nfs-provisioned PVC that displays from `kubectl get pvc`.
+6. Edit your helm `values.yaml` such that `NewLocalPVC` is enabled and `ExistingLocalPVC` is disabled. Give it some memory, and make sure the `StorageClass` is `nfs`. This allows for the creation of a PVC with `RWX` access, which is necessary for multiple pods to write to memory. Run with `helm3 install nf nextflow-api`
 
 7. Use `kubectl get services` to find the external IP and port of your service, and you're good to go!
 

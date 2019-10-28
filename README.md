@@ -29,6 +29,11 @@ Also good to know:
 - minio scripts: https://github.com/minio/minio/blob/master/docs/orchestration/kubernetes/
 - PV(C) won't delete? Use this command to make it: `kubectl patch pvc db-pv-claim -p '{"metadata":{"finalizers":null}}'` (also check for volume attachments using `kubectl get volumeattachments`)
 
+
+## NF-API
+Deploying the Nextflow API works via pulling an image of the API from Dockerhub. To edit the api, fork the scidas/nextflow-api repo, edit its Dockerfile, and make sure that the `values.yaml` of the Helm charts is targeting the image you've created.
+
+
 ## Slate
 - Peruse the incubator - >`slate app list --dev`
 - set up minio configuration -> `slate app get-conf minio --dev -o minio.yaml`
