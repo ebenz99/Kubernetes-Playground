@@ -38,6 +38,7 @@ Deploying the Nextflow API works via pulling an image of the API from Dockerhub.
 - Peruse the incubator - >`slate app list --dev`
 - set up minio configuration -> `slate app get-conf minio --dev -o minio.yaml`
 - create a secret -> `slate secret create ekey --group <group> --cluster <cluster> --from-literal=accesskey=<username> --from-literal=secretkey=<secret>`
+- edit the yaml to use service type NodePort and not ClusterIP. Give it an instance name. Also give it the name of the secret you've created
 - installing minio -> `slate app install minio --cluster <YOUR CLUSTER> --group <YOUR GROUP> --conf minio.yaml --dev`
 
 ## Minio
