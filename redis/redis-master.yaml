@@ -20,7 +20,10 @@ spec:
     spec:
       containers:
       - name: master
-        image: k8s.gcr.io/redis:e2e  # or just image: redis
+        #image: k8s.gcr.io/redis:e2e  # or just 
+        image: redis
+        command: ["redis-server","--requirepass", "helloworld"]
+        #args: ["--requirepass", "helloworld"]
         resources:
           requests:
             cpu: 100m
@@ -47,3 +50,4 @@ spec:
     app: redis
     role: master
     tier: backend
+
