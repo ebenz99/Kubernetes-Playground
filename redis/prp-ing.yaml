@@ -1,0 +1,16 @@
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: nginx-ingress
+spec:
+  rules:
+  - host: scidas-redis.nautilus.optiputer.net
+    http:
+      paths:
+      - backend:
+          serviceName: redis-master
+          servicePort: 6379
+        path: /
+  tls:
+  - hosts:
+    - scidas-redis.nautilus.optiputer.net
